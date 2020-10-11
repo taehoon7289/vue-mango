@@ -4,7 +4,13 @@ import "./registerServiceWorker";
 import router from "./router";
 import store from "./store";
 
-createApp(App)
+import dayjs from "dayjs";
+
+const app = createApp(App);
+
+app.config.globalProperties.$dayjs = dayjs;
+
+app
   .use(store)
   .use(router)
   .mount("#app");
