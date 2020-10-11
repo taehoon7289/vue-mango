@@ -4,7 +4,7 @@ import "./registerServiceWorker";
 import router from "./router";
 import store from "./store";
 
-import dayjs from "dayjs";
+import { dayjs } from "./globalProperties";
 
 const app = createApp(App);
 
