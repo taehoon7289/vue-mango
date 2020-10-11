@@ -35,17 +35,18 @@ export default {
     console.log("attrs", attrs);
     console.log("slots", slots);
     console.log("emit", emit);
-    const route = useRoute()
-    console.log("route.fullPath", route.fullPath)
-    console.log("route", route)
-    const router = useRouter()
-    setTimeout(() => {
-      router.push("/")
-    }, 2000)
+    const route = useRoute();
+    console.log("route.fullPath", route.fullPath);
+    console.log("route", route);
+    const router = useRouter();
+    console.log("router", router);
+    // setTimeout(() => {
+    //   router.push("/");
+    // }, 2000);
     const data = reactive({
       text: "aaaaaaaaaaaa",
       test: computed(() => data.text.toUpperCase()),
-      value: dayjs()
+      value: dayjs().format('YYYY-MM-DD')
     });
     onBeforeMount(() => {
       // ...
@@ -83,6 +84,7 @@ export default {
       // ...
       console.log("onErrorCaptured", this);
     });
+    console.log('testestetst', data)
     return {
       data
     };
