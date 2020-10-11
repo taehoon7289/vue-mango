@@ -18,16 +18,10 @@ export default {
     }
   },
   async setup() {
-    const { count } = useCount()
-    fnTest
+    const { count } = useCount();
     return {
       count
-    }
-  },
-  methods: {
-    fnTest(val) {
-      return this.$dayjs(val).format("YYYY-MM-DD HH:mm:ss");
-    }
+    };
   }
 };
 </script>

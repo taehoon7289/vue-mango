@@ -26,6 +26,7 @@ import {
 import Test from "@/components/test";
 
 import dayjs from "dayjs";
+import { useRoute, useRouter } from "vue-router";
 
 export default {
   name: "about",
@@ -34,6 +35,13 @@ export default {
     console.log("attrs", attrs);
     console.log("slots", slots);
     console.log("emit", emit);
+    const route = useRoute()
+    console.log("route.fullPath", route.fullPath)
+    console.log("route", route)
+    const router = useRouter()
+    setTimeout(() => {
+      router.push("/")
+    }, 2000)
     const data = reactive({
       text: "aaaaaaaaaaaa",
       test: computed(() => data.text.toUpperCase()),
