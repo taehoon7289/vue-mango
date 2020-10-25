@@ -31,13 +31,13 @@ export default {
   //   };
   // },
   async setup(props) {
-    console.log('propspropspropspropspropsprops', props)
-    console.log('@!#!@#!@', props.value)
+    console.log("propspropspropspropspropsprops", props);
+    console.log("@!#!@#!@", props.value);
     const { count } = useCount();
     const data = reactive({
       value: props.value
-    })
-    console.log('#@!#!@#!@#!@#@!#!@', data)
+    });
+    console.log("#@!#!@#!@#!@#@!#!@", data);
     return {
       count,
       data
