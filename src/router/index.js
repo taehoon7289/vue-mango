@@ -4,7 +4,22 @@ const routes = [
   {
     path: "/",
     name: "Main",
-    component: () => import("@/views/main/index")
+    component: () => import("@/views/main"),
+    meta: () => {
+      return {
+        title: "망고날씨"
+      };
+    }
+  },
+  {
+    path: "/about",
+    name: "About",
+    component: () => import("@/views/about"),
+    meta: () => {
+      return {
+        title: "망고날씨"
+      };
+    }
   }
 ];
 

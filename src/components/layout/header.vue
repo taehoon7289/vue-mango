@@ -8,29 +8,37 @@
       </div>
     </div>
     <div class="title">
-      <span>망고의 날씨앱</span>
+      <span>날씨앱</span>
     </div>
   </header>
 </template>
 
 <script>
 import "./header.scss";
-import { computed } from "vue";
+import { computed, watch } from "vue";
 import { useStore } from "vuex";
+import { useRoute } from "vue-router";
 export default {
   name: "header",
   setup() {
+    const route = useRoute();
     const store = useStore();
     const isShowDrawer = computed(() => {
       return store.getters["app/getIsShowDrawer"];
     });
+
+    // 현재 path 감지
+    watch(route, () => {
+      console.log("watch route", route.fullPath);
+    });
+
     return {
       isShowDrawer
     };
   },
   methods: {
     fnClick() {
-      this.$store.commit("app/setIsShowDrawer", {
+      this.$store.dispatch("app/updateIsShowDrawer", {
         isShowDrawer: !this.isShowDrawer
       });
     }

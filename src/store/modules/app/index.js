@@ -1,18 +1,18 @@
-export const actions = {};
+export const actions = {
+  updateIsShowDrawer({ commit }, payload) {
+    commit("setIsShowDrawer", payload);
+  }
+};
 export const state = {
   isShowDrawer: false
 };
 export const getters = {
   getIsShowDrawer: state => {
     return state.isShowDrawer;
-  },
-  getTest: state => {
-    return state.test;
   }
 };
 export const mutations = {
   setIsShowDrawer(state, { isShowDrawer }) {
-    console.log("setIsShowDrawer", isShowDrawer);
     state.isShowDrawer = isShowDrawer;
   }
 };
