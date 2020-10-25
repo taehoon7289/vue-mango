@@ -1,0 +1,12 @@
+.nav-drawer {
+  top: 5rem;
+  position: absolute;
+  width: 100%;
+  font-size: 2rem;
+  z-index: 15;
+  background-color: aqua;
+  display: none;
+  &.on {
+    display: block;
+  }
+}

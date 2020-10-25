@@ -1,5 +1,5 @@
 import { createStore } from "vuex";
-import app from "./modules/app/index"
+import app from "./modules/app/index";
 export default createStore({
   strict: false,
   state: {
